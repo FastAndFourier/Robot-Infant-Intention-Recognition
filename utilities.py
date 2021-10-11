@@ -125,9 +125,9 @@ def detect_intention(X:np.ndarray,y:np.ndarray,label:list):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.40, random_state=42)
 
     label_str = categorical2label(label)
-    print("Training set balance :",end=" ")
+    print("Dataset balance :",end=" ")
     for l,str in zip(label_str,label):
-        print("Number of",l,"= {:.2f} %".format(len(np.where(y_train==str)[0])/np.size(y_train)*100),end=" ")
+        print("Number of",l,"= {:.2f} %".format(len(np.where(y==str)[0])/np.size(y)*100),end=" ")
 
 
     print(" ")
